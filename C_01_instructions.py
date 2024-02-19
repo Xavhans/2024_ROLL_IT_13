@@ -1,20 +1,42 @@
 # checks users enter yes (y) or no (n)
 def yes_no(question):
     while True:
-        want_instructions = input(question)
+        response = input(question).lower()
 
 
-    if want_instructions == "yes" or want_instructions == "y":
-        return "yes"
-    elif want_insrtuctions == "no" or want_instructions == "n":
-        return "no"
-    else:
-        print("You did not chose a valid response")
+        if response == "yes" or response == "y":
+            return "yes"
+        elif response == "no" or response == "n":
+            return "no"
+        else:
+            print("Please enter yes / no")
+
+def instruction():
+    print('''
+    
+***** Instructions *****
+ 
+Do something 
+
+    
+    
+    
+    
+    ''')
+
+
+
 
 #main
-while True:
-    want_instructions = yes_no("Do you want to read the instructins")
-    print(f"you chose {want_instructions}")
+print("Roll it 13")
+
+
+want_instructions = yes_no("Do you want to read the instructions?\n")
+
+if want_instructions == "yes":
+    instruction()
+print("Program continues ")
+
     
 
 
